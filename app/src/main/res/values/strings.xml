@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JobPortal</string>
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
+
+    <!-- Auth -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+
+    <!-- Job -->
+    <string name="apply_now">Apply Now</string>
+    <string name="save_job">Save Job</string>
+    <string name="share_job">Share Job</string>
+    <string name="already_applied">Already Applied ✓</string>
+
+    <!-- Common -->
+    <string name="loading">Loading...</string>
+    <string name="no_data">No data found!</string>
+    <string name="error">Something went wrong!</string>
+    <string name="logout">Logout</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+</resources>

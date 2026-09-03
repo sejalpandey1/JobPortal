@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#1565C0"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@mipmap/ic_launcher"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/tvChangePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Photo"
+                android:textColor="#BBDEFB"
+                android:textSize="13sp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Full Name"
+                android:background="@drawable/edittext_bg"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:background="@drawable/edittext_bg"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/etSkills"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Skills (e.g. Java, Python, Excel)"
+                android:background="@drawable/edittext_bg"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/etExperience"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Experience"
+                android:gravity="top"
+                android:background="@drawable/edittext_bg"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/etEducation"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Education"
+                android:gravity="top"
+                android:background="@drawable/edittext_bg"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:layout_marginBottom="24dp"/>
+
+            <Button
+                android:id="@+id/btnUploadResume"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Upload Resume (PDF)"
+                android:textSize="16sp"
+                android:backgroundTint="#424242"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvResumeStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No resume selected"
+                android:textSize="13sp"
+                android:textColor="#757575"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnViewResume"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="View Resume"
+                android:textSize="14sp"
+                android:backgroundTint="#1565C0"
+                android:layout_marginBottom="24dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Save Profile"
+                android:textSize="16sp"
+                android:backgroundTint="#1565C0"
+                android:layout_marginBottom="16dp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

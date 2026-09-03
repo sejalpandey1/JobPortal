@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4F8">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1565C0"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Resume Builder 🤖"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generate professional resume with AI"
+            android:textColor="#BBDEFB"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp"/>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Input Card -->
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Details"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#1565C0"
+                        android:layout_marginBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:hint="Full Name *"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:hint="Phone"
+                        android:inputType="phone"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etObjective"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:hint="Career Objective (optional)"
+                        android:gravity="top"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="12dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etSkills"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:hint="Skills * (e.g. Java, Android, Firebase)"
+                        android:gravity="top"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="12dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etExperience"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:hint="Work Experience (or Fresher)"
+                        android:gravity="top"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="12dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etEducation"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:hint="Education Details"
+                        android:gravity="top"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="12dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Template"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1565C0"
+                        android:layout_marginBottom="8dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerTemplate"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingStart="16dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <Button
+                        android:id="@+id/btnGenerate"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="🤖 Generate Resume with AI"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="#1565C0"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Result Card -->
+            <ScrollView
+                android:id="@+id/scrollResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✅ Generated Resume"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#2E7D32"
+                            android:layout_marginBottom="12dp"/>
+
+                        <TextView
+                            android:id="@+id/tvGeneratedResume"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="14sp"
+                            android:textColor="#212121"
+                            android:lineSpacingExtra="4dp"
+                            android:layout_marginBottom="16dp"/>
+
+                        <Button
+                            android:id="@+id/btnClear"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:text="🗑️ Clear"
+                            android:textSize="14sp"
+                            android:backgroundTint="#424242"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp">
+
+                            <Button
+                                android:id="@+id/btnShare"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_weight="1"
+                                android:text="📤 Share"
+                                android:textSize="12sp"
+                                android:backgroundTint="#1565C0"
+                                android:layout_marginEnd="6dp"/>
+
+                            <Button
+                                android:id="@+id/btnCopy"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_weight="1"
+                                android:text="📋 Copy"
+                                android:textSize="12sp"
+                                android:backgroundTint="#424242"
+                                android:layout_marginEnd="6dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp">
+
+                            <Button
+                                android:id="@+id/btnSavePdf"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_weight="1"
+                                android:text="📄 Save PDF"
+                                android:textSize="12sp"
+                                android:backgroundTint="#2E7D32"
+                                android:layout_marginEnd="6dp"/>
+
+                            <Button
+                                android:id="@+id/btnSendEmployer"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_weight="1"
+                                android:text="📧 Send"
+                                android:textSize="12sp"
+                                android:backgroundTint="#E65100"/>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnClear"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:text="🗑️ Clear"
+                            android:textSize="13sp"
+                            android:backgroundTint="#757575"
+                            android:layout_marginTop="8dp"/>
+
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </ScrollView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

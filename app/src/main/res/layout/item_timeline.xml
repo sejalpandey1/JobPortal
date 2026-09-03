@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Job Title + Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/tvJobTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Job Title"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#1565C0"/>
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENDING"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAppliedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Applied: "
+            android:textSize="12sp"
+            android:textColor="#9E9E9E"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Timeline Steps -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Step 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/step1"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:text="✅"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="#E8F5E9"/>
+
+                <TextView
+                    android:id="@+id/tvStep1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Applied"
+                    android:textSize="10sp"
+                    android:textColor="#2E7D32"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!-- Line 1 -->
+            <View
+                android:id="@+id/line1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.5"
+                android:background="#2E7D32"/>
+
+            <!-- Step 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/step2"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:text="⏳"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="#FFF3E0"/>
+
+                <TextView
+                    android:id="@+id/tvStep2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reviewing"
+                    android:textSize="10sp"
+                    android:textColor="#E65100"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!-- Line 2 -->
+            <View
+                android:id="@+id/line2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.5"
+                android:background="#BDBDBD"/>
+
+            <!-- Step 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/step3"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:text="⏳"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="#E3F2FD"/>
+
+                <TextView
+                    android:id="@+id/tvStep3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shortlisted"
+                    android:textSize="10sp"
+                    android:textColor="#1565C0"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!-- Line 3 -->
+            <View
+                android:id="@+id/line3"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.5"
+                android:background="#BDBDBD"/>
+
+            <!-- Step 4 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/step4"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:text="⏳"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="#F3E5F5"/>
+
+                <TextView
+                    android:id="@+id/tvStep4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Interview"
+                    android:textSize="10sp"
+                    android:textColor="#6A1B9A"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

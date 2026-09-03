@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JobPortal">
+        <activity
+            android:name="com.example.app.activities.AllApplicantsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.app.activities.ResumeBuilderActivity"
+            android:exported="false" /> <!-- LAUNCHER — OnboardingActivity -->
+        <activity
+            android:name=".activities.OnboardingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Auth -->
+        <activity android:name=".activities.SplashActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.RegisterActivity" /> <!-- Job Seeker -->
+        <activity android:name=".activities.JobSeekerDashboard" />
+        <activity android:name=".activities.JobDetailActivity" />
+        <activity android:name=".activities.SearchJobActivity" />
+        <activity android:name=".activities.MyApplicationsActivity" />
+        <activity android:name=".activities.ApplicationDetailActivity" />
+        <activity android:name=".activities.ApplicationTimelineActivity" />
+        <activity android:name=".activities.SavedJobsActivity" />
+        <activity android:name=".activities.SeekerProfileActivity" />
+        <activity android:name=".activities.EditProfileActivity" />
+        <activity android:name=".activities.MyInterviewsActivity" /> <!-- Employer -->
+        <activity android:name=".activities.EmployerDashboard" />
+        <activity android:name=".activities.PostJobActivity" />
+        <activity android:name=".activities.EditJobActivity" />
+        <activity android:name=".activities.ViewApplicantsActivity" />
+        <activity android:name=".activities.InterviewScheduleActivity" />
+        <activity android:name=".activities.CompanyProfileActivity" />
+        <activity android:name=".activities.EditCompanyProfileActivity" /> <!-- Admin -->
+        <activity android:name=".activities.AdminDashboardActivity" />
+        <activity android:name=".activities.AdminUsersActivity" />
+        <activity android:name=".activities.AdminJobsActivity" /> <!-- Chat + Notifications -->
+        <activity
+            android:name=".activities.ChatActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".activities.ChatListActivity" />
+        <activity android:name=".activities.NotificationsActivity" />
+        <activity android:name=".activities.ResumeBuilderActivity" />
+        <activity android:name=".activities.AllApplicantsActivity"/><!-- Firebase Messaging Service -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- FileProvider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

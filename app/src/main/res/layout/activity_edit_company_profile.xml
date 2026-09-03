@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Company Profile"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/etCompanyName"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Company Name"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etCompanyEmail"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Company Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etCompanyPhone"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Company Phone"
+            android:inputType="phone"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etCompanyWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Company Website"
+            android:inputType="textWebEmailAddress"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etCompanyLocation"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Company Location"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etCompanySize"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Company Size (e.g. 50-100 employees)"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etCompanyIndustry"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Industry (e.g. IT, Finance, Healthcare)"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etCompanyDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="About Company"
+            android:gravity="top"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Save Company Profile"
+            android:textSize="16sp"
+            android:backgroundTint="#1565C0"
+            android:layout_marginBottom="16dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>

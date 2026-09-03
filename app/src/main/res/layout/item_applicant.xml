@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#E3F2FD"
+                android:gravity="center"
+                android:layout_marginEnd="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👤"
+                    android:textSize="24sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Applicant Name"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"/>
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="email"
+                    android:textSize="13sp"
+                    android:textColor="#757575"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENDING"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvJobTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Title"
+            android:textSize="13sp"
+            android:textColor="#1565C0"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Applied: "
+            android:textSize="12sp"
+            android:textColor="#9E9E9E"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnShortlist"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="✅ Shortlist"
+                android:textSize="12sp"
+                android:backgroundTint="#2E7D32"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnReject"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="❌ Reject"
+                android:textSize="12sp"
+                android:backgroundTint="#B71C1C"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnViewResume"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="📄 View Resume"
+            android:textSize="12sp"
+            android:backgroundTint="#1565C0"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnChat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="💬 Chat with Applicant"
+            android:textSize="12sp"
+            android:backgroundTint="#6A1B9A"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnScheduleInterview"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="📅 Schedule Interview"
+            android:textSize="12sp"
+            android:backgroundTint="#0D47A1"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
